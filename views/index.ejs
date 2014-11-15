@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express + Multer // Demo</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <label for="csv">Selecione o arquivo (csv): </label>
+      <input type="file" name="csv" required><br>
+      <input type="submit" value="Gerar Relatório">
+    </form>
+    <hr>
+    <% if(typeof message != 'undefined' && message.length > 0) { %>
+      <script>alert("<%= message %>");window.location = '/';</script>
+    <% } %>
+  </body>
+</html>
